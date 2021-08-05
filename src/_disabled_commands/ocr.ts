@@ -43,7 +43,7 @@ export default class OCRCommand extends Command {
   }
 
   async exec(message: Message, args: any) {
-
+    console.log(!config.gcloud)
     if (!config.gcloud) {
       message.reply('Google cloud configuration is not enabled for this bot. This command is disabled');
       return;
